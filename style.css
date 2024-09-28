@@ -14,7 +14,7 @@ html {
 
 body {
     position: sticky;
-    background-image: url(./img/DSCF0125.JPG );
+    background-image: url(./img/DSCF0125.JPG);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -32,7 +32,7 @@ nav {
 
 /* links styles */
 
-a {
+nav a {
     color: rgb(13, 52, 13);
     font-size: 1.5rem;
     font-weight: 800;
@@ -40,7 +40,7 @@ a {
     text-align: center;
 }
 
-a:hover {
+nav a:hover {
     font-size: 1.8rem;
     text-decoration: none;
     color: rgba(144, 238, 144, 0.414);
@@ -78,10 +78,140 @@ img {
     border-radius: 4px;
 }
 
-/* poland mountains section */
+/* main section */
 
-/* england mountains section */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    max-width: 1400px;
+    justify-items: center;
+    justify-content: center;
+    padding: 3rem 15%;
+}
 
-/* slovakia mountains section */
+.grid-title {
+    color: aliceblue;
+    /* text-align: center; */
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+/* images section */
+
+.grid-img {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+}
+
+.grid-img img {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    color: aliceblue;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.hover-zoom {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-zoom:hover {
+    position: absolute;
+    /* Allow it to grow without restrictions */
+    max-width: none;
+    max-height: none;
+    /* Enlarge the image on hover */
+    transform: scale(3);
+    /* Ensure it's above other elements */
+    z-index: 10;
+}
+
+/* pl section */
+
+.grid-container h2 {
+    padding: 2rem 0;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2rem;
+    grid-column: span 4;
+}
+
+.pl-area {
+    background-color: rgba(230, 39, 14, 0.500);
+    grid-row: 1;
+}
+
+.pl-title {
+    grid-row: 2;
+}
+
+.pl-img {
+    grid-row: 3;
+}
+
+/* en section */
+
+.en-area {
+    margin-top: 2rem;
+    background-color: rgba(121, 242, 236, 0.500);
+    grid-row: 4;
+}
+
+.en1-title {
+    grid-row: 5;
+}
+
+.en1-img {
+    grid-row: 6;
+}
+
+.en2-title {
+    grid-row: 7;
+}
+
+.en2-img {
+    grid-row: 8;
+}
+
+/* sk section */
+
+.sk-area {
+    background-color: rgba(15, 191, 218, 0.500);
+    justify-items: center;
+    text-align: center;
+    grid-row: 9;
+}
+
+.sk-title {
+    grid-row: 10;
+}
+
+.sk-img {
+    grid-row: 11;
+}
 
 /* footer section */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 100, 0, 0.805);
+    width: 100%;
+    height: 150px;
+}
+
+footer h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: rgb(5, 36, 36);
+}
