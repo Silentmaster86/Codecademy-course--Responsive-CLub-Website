@@ -16,7 +16,8 @@ body {
     position: sticky;
     background-image: url(./img/DSCF0125.JPG);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 /* nav section located in header */
@@ -113,13 +114,13 @@ img {
     height: auto;
     border-radius: 6px;
     color: aliceblue;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-out;
     overflow: hidden;
 }
 
 .hover-zoom {
     display: block;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 .hover-zoom:hover {
@@ -202,7 +203,7 @@ img {
 
 .contact {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(101, 107, 82, 0.582);
@@ -219,7 +220,7 @@ img {
 .contact h2 a:hover {
     color: rgb(140, 247, 247);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 
@@ -231,12 +232,12 @@ footer {
     justify-content: center;
     background-color: rgba(0, 100, 0, 0.805);
     width: 100%;
-    height: 150px;
+    height: 100px;
 }
 
 footer h3 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 1.5em;
     color: rgb(5, 36, 36);
 }
 
@@ -295,8 +296,7 @@ footer h3 {
 @media only screen and (max-width: 940px) {
 
     body {
-        background-color: rgba(163, 169, 175, 0.632);
-        background-image: none;
+        background-position: center;
     }
 
     .grid-container {
@@ -307,7 +307,7 @@ footer h3 {
     }
 
     .grid-img img {
-        width: 400px;
+        width: 300px;
         height: auto;
     }
 
@@ -338,7 +338,6 @@ footer h3 {
         align-items: center;
         flex-wrap: wrap;
     }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -346,6 +345,11 @@ footer h3 {
         padding: 2rem 0;
         flex-direction: column;
         gap: 1.5rem;
+        height: auto;
+    }
+
+    .grid-img img {
+        width: 200px;
         height: auto;
     }
 }
@@ -358,9 +362,50 @@ footer h3 {
         font-weight: 900;
     }
 
+    .grid-title {
+        font-size: 1.3em;
+    }
+
+    .contact {
+        column-gap: 0.1rem;
+        row-gap: 0.5rem;
+        height: 6rem;
+        border-radius: 0%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact h2 a {
+        font-size: 0.9rem;
+    }
+
     footer h3 {
-        padding: 0 20%;
-        line-height: 3rem;
+        font-size: 1.2em;
+        padding: 0 5%;
+        line-height: 1rem;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .title-container {
+        word-spacing: 0.1rem;
+    }
+
+    .title-container p {
+        font-size: 0.8rem;
+    }
+
+    .grid-title {
+        font-size: 1em;
+    }
+
+    footer {
+        height: 50px;
+    }
+
+    footer h3 {
+        font-size: 1em;
+        padding: 0 5%;
     }
 
 }
